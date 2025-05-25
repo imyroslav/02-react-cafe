@@ -1,21 +1,17 @@
-import { useState } from 'react';
 
-import css from './App.module.css'
-import CafeInfo from '../CafeInfo/CafeInfo'
-
-
+import css from './App.module.css';
+import CafeInfo from '../CafeInfo/CafeInfo';
+import VoteOptions from '../VoteOptions/VoteOptions';
+// import Votes from "../../types/votes";
+ 
 
 function App() {
 
-  const [votes, setVotes] = useState({});
-
-  const handleVote = 
-
+  
   return (
     <div className={css.app}>
-
-    <CafeInfo />
-
+      <CafeInfo />
+      <VoteOptions />
     </div>
 
   )

@@ -1,10 +1,11 @@
-interface Votes {
-    good: number;
-    neutral: number;
-    bad: number;
-}
-
-type VoteType = "good" | "neutral" | "bad";
 
 
-export default Votes;
+
+
+//  type VoteType = "good" | "neutral" | "bad";
+
+
+
+
+
+
