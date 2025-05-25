@@ -15,11 +15,7 @@ export default function VoteOptions() {
         neutral: 0,
         bad: 0
     }
-    const [votes, setVotes] = useState<Votes>({
-        good: 0,
-        neutral: 0,
-        bad: 0,
-    });
+    const [votes, setVotes] = useState<Votes>(initialState);
 
     const handleVotes = (key: keyof Votes) => {
         setVotes({
