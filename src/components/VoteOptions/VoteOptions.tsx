@@ -17,6 +17,8 @@ export default function VoteOptions() {
     }
     const [votes, setVotes] = useState<Votes>(initialState);
 
+    
+
     const handleVotes = (key: keyof Votes) => {
         setVotes({
             ...votes,
