@@ -22,7 +22,7 @@ export default function VoteOptions() {
     const handleVotes = (key: keyof Votes) => {
         setVotes({
             ...votes,
-            [key]: votes.[key] + 1,
+            [key]: votes[key] + 1,
         });
     }
 
