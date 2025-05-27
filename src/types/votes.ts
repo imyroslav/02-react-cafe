@@ -6,7 +6,7 @@ export interface Votes {
 
 
 
-//  type VoteType = "good" | "neutral" | "bad";
+export type VoteType = "good" | "neutral" | "bad";
 
 
 

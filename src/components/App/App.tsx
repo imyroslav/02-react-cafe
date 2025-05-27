@@ -4,9 +4,9 @@ import css from './App.module.css';
 import CafeInfo from '../CafeInfo/CafeInfo';
 import VoteOptions from '../VoteOptions/VoteOptions';
 import VoteStats from '../VoteStats/VoteStats';
-import Notification from '../Notification/Notfication';
+import Notification from '../Notification/Notification';
 import { type Votes } from "../../types/votes";
-// import Votes from "../../types/votes";
+import { type VoteType } from "../../types/votes";
  
 
 function App() {
@@ -20,10 +20,10 @@ const [votes, setVotes] = useState<Votes>(initialState);
 
 
 
-const handleVotes = (key: keyof Votes) => {
+const handleVote = (vote: VoteType) => {
     setVotes({
         ...votes,
-        [key]: votes[key] + 1,
+        [vote]: votes[vote] + 1,
     });
 }
 
@@ -43,8 +43,8 @@ const positiveRate = totalVotes
   return (
     <div className={css.app}>
       <CafeInfo />
-      <VoteOptions onVote={handleVotes} onReset={resetVotes} reset={canReset} />
-      { totalVotes > 0 ? <VoteStats stats={votes} totalStats={totalVotes} positiveStats={positiveRate} />
+      <VoteOptions onVote={handleVote} onReset={resetVotes} canReset={canReset} />
+      { totalVotes > 0 ? <VoteStats votes={votes} totalVotes={totalVotes} positiveRate={positiveRate} />
       : <Notification />}
     </div>
 
